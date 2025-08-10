@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — James Bolina</title>
+  <meta name="description" content="Portfolio — James Bolina | Web Developer" />
+  <style>
+    .logo {
+  
+  width: 50px; 
+  height: 50px; 
+  border-radius: 50%; 
+  overflow: hidden; 
+}
+
+  .logo img {
+ 
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block; 
+}
+    :root{
+      --bg:#0f1724; /* dark navy */
+      --card:#0b1220;
+      --muted:#94a3b8;
+      --accent:#7c3aed; /* purple */
+      --glass: rgba(255,255,255,0.04);
+      --max:1100px;
+      --radius:14px;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:linear-gradient(180deg,#071026 0%, #071323 60%);
+      color:#e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      padding:36px 18px;
+    }
+    .wrap{max-width:var(--max);margin:0 auto}
+
+    /* header */
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:28px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#2dd4bf);display:flex;align-items:center;justify-content:center;font-weight:700}
+    nav{display:flex;gap:18px}
+    nav a{color:var(--muted);text-decoration:none;font-size:15px}
+    nav a:hover{color:#fff}
+    .cta{background:linear-gradient(90deg,var(--accent),#4f46e5);padding:8px 14px;border-radius:10px;text-decoration:none;color:#fff}
+
+    /* mobile nav */
+    .hamburger{display:none;background:transparent;border:1px solid var(--glass);padding:8px;border-radius:10px}
+
+    /* hero */
+    .hero{display:grid;grid-template-columns:1fr;gap:18px;align-items:center;margin-bottom:28px}
+    .intro{padding:22px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:var(--radius);box-shadow:0 6px 18px rgba(2,6,23,0.8)}
+    h1{font-size:28px;margin:0 0 6px}
+    .lead{color:var(--muted);margin:0 0 12px}
+    .actions{display:flex;gap:12px}
+    .btn{padding:10px 14px;border-radius:10px;text-decoration:none;display:inline-block}
+    .btn.secondary{background:transparent;border:1px solid var(--glass);color:var(--muted)}
+
+    /* grid */
+    .grid{display:grid;grid-template-columns:1fr;gap:18px}
+    section{background:var(--card);padding:18px;border-radius:12px}
+    h2{margin:0 0 12px}
+
+    /* projects */
+    .projects-grid{display:grid;grid-template-columns:repeat(1,1fr);gap:12px}
+    .project{padding:12px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);display:flex;flex-direction:column;gap:10px}
+    .project .meta{display:flex;justify-content:space-between;color:var(--muted);font-size:13px}
+    .tags{display:flex;gap:8px;flex-wrap:wrap}
+    .tag{padding:6px 8px;border-radius:999px;background:var(--glass);font-size:12px;color:var(--muted)}
+
+    /* skills */
+    .skills{display:flex;gap:8px;flex-wrap:wrap}
+    .skill{padding:8px 12px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);color:var(--muted)}
+
+    /* contact */
+    form{display:grid;grid-template-columns:1fr;gap:10px}
+    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px;color:inherit}
+    textarea{min-height:120px}
+    .footer{margin-top:18px;text-align:center;color:var(--muted);font-size:14px}
+
+    /* responsive */
+    @media(min-width:720px){
+      .hero{grid-template-columns:1fr 360px}
+      .projects-grid{grid-template-columns:repeat(2,1fr)}
+      nav{display:flex}
+      .hamburger{display:none}
+    }
+    @media(max-width:719px){
+      nav{display:none}
+      .hamburger{display:block}
+      .logo{width:44px;height:44px}
+    }
+
+    @media(min-width:1100px){
+      .projects-grid{grid-template-columns:repeat(3,1fr)}
+    }
+
+    /* small utilities */
+    .muted{color:var(--muted)}
+    a.link{color:var(--accent);text-decoration:none}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">
+  <img src="id.jpg" alt="Your Name">
+            </div>
+        <div>
+          <div style="font-weight:700">James Bolina</div>
+          <div class="muted" style="font-size:13px">Web Developer • Frontend • UI/UX</div>
+        </div>
+      </div>
+
+      <nav id="nav">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        
+      </nav>
+
+      <button class="hamburger" id="hambBtn" aria-label="menu">☰</button>
+    </header>
+
+    <main class="grid">
+      <section class="hero">
+        <div class="intro">
+          <h1>Hi, I'm <span style="color:var(--accent)">James Bolina</span></h1>
+          <p class="lead">A  Computer Science student who enjoys making a simple website.</p>
+          <div class="actions">
+            <a class="btn" href="#projects">View Projects</a>
+            <a class="btn secondary" href="#contact">Contact</a>
+          </div>
+
+          <div style="margin-top:14px;color:var(--muted);font-size:14px">
+            <strong>Location:</strong> Philippines, Dasmariñas, Cavite • <strong>Availability:</strong> Open for OJT 
+          </div>
+        </div>
+
+        <aside style="padding:18px;border-radius:12px;background:var(--glass);height:100%">
+          <h3 style="margin-top:0">Quick Links</h3>
+          <ul style="padding-left:18px;margin:8px 0;color:var(--muted)">
+            <li>Facebook — <a class="link" href="https://web.facebook.com/sanaakonalang.masayakasana">Visit Profile</a></li>
+            <li>LinkedIn — <a class="link" href="https://www.linkedin.com/in/james-bolina-a473b0379/">Visit Profile</a></li>
+            <li>GitHub — <a class="link" href="https://github.com/Jamesbolina06">Visit Profile</a></li>
+          </ul>
+          <div style="margin-top:12px">
+            <small class="muted">James Ivan Delacruz Bolina</small>
+          </div>
+        </aside>
+      </section>
+
+      <section id="about">
+        <h2>About</h2>
+        <p style="margin-top:8px">I'm currently focused on frontend development, building responsive UI and improving UX through small performance.</p>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+          <article class="project">
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <strong>Offline Student Enrollment System 
+Asian Institute of Science and Technology 
+2025</strong>
+              <span class="muted">Python • QtDesigner • SQLite</span>
+            </div>
+            <p class="muted"> Developed a desktop application using Python and SQLite
+ for managing student data, also using Qt Designer for UI/UX</p>
+            <p class="muted">Features include login, enrollment, and data search
+ functionalities</p>
+            <div class="meta">
+              <div class="tags">
+                <span class="tag">Desktop App</span>
+                <span class="tag">School</span>
+              </div>
+              <div><a class="link" href="#">View</a> • <a class="link" href="#">Source</a></div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <strong>My Portfolio</strong>
+              <span class="muted">HTML • CSS • JS</span>
+            </div>
+            <p class="muted">This template responsive, single-file, and easy to customize. Great starting point for a personal website.</p>
+            <div class="meta">
+              <div class="tags"><span class="tag">Frontend</span></div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <strong> Authentic Era </strong>
+              <span class="muted">Figma</span>
+            </div>
+            <p class="muted"> A modern streetwear and fashion clothing line, designed entirely in Figma. The goal was to create a clean, intuitive, and visually engaging mobile 
+              application that enhances the user's shopping experience and strengthens the brand's identity.</p>
+            <div class="meta">
+              <div class="tags"><span class="tag">Prototype</span><span class="tag">UI/UX</span></div>
+              <div><a class="link" href="https://www.figma.com/proto/HMS1zp00jUMkmu0tu1eLw1/PROJECT-IN-AL-102?node-id=3-20&p=f&t=cqIpFPwRF7OG5wr3-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2">Visit</a></div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills">
+          <div class="skill">HTML</div>
+          <div class="skill">CSS</div>
+          <div class="skill">JavaScript</div>
+          <div class="skill">Python</div>
+          <div class="skill">Responsive Design</div>
+          <div class="skill">Basic SQL / SQLite</div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p class="muted">Want to work together? Send a quick message — I'll get back to you.</p>
+        <form id="contactForm" onsubmit="handleContact(event)">
+          <input id="name" placeholder="Your name" required />
+          <input id="email" placeholder="Your email" type="email" required />
+          <textarea id="message" placeholder="What do you want to build?" required></textarea>
+          <button type="submit'" class="btn" style="width:160px">Send message</button>
+        </form>
+        <div class="footer">Or email me at <a class="link" href="mailto:jamesbolina64@gmail.com">jamesbolina64@gmail.com</a></div>
+      </section>
+
+      <div style="height:30px"></div>
+
+      <footer style="text-align:center;color:var(--muted);font-size:13px">© <span id="year"></span> James Bolina </footer>
+
+    </main>
+  </div>
+
+  <script>
+    // Mobile nav toggle
+    const nav = document.getElementById('nav');
+    const btn = document.getElementById('hambBtn');
+    btn.addEventListener('click', ()=>{
+      if(nav.style.display === 'flex') nav.style.display = 'none';
+      else nav.style.display = 'flex';
+    });
+
+    // Smooth scrolling for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const href = a.getAttribute('href');
+        if(href.length>1){
+          e.preventDefault();
+          document.querySelector(href).scrollIntoView({behavior:'smooth',block:'start'});
+          if(window.innerWidth < 720) nav.style.display = 'none';
+        }
+      });
+    });
+
+    // contact form handler (client-side only)
+    function handleContact(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      if(!name || !email || !message) return alert('Please fill all fields');
+      // For a real site, send this to a backend or use a form service. For now we'll open mailto.
+      const subject = encodeURIComponent('Portfolio contact from ' + name);
+      const body = encodeURIComponent(message + '\n\n— ' + name + ' (' + email + ')');
+      window.location.href = 'mailto:your@email.com?subject=' + subject + '&body=' + body;
+    }
+
+    // set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
